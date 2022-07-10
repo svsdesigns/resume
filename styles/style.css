@@ -1942,7 +1942,7 @@ img:not([src]) {
   box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
 }
 .btn--fab > button {
-  background-image: url(/images/darkmode.svg);
+  background-image: url(../images/darkmode.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
   width: 3rem;
