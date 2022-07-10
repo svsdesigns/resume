@@ -1,0 +1,74 @@
+#day-light-toggle {
+  color: $color-brand-primary !important;
+  .material-icons {
+    opacity: 1;
+  }
+  &:hover, &:active, &:focus {
+    // background-color: transparent !important;
+    background-color: rgba(255,255,255,0.2) !important;
+
+
+    .material-icons {
+      opacity: 1;
+    }
+  }
+}
+.dark-icons {
+  img:last-child {
+    display: none;
+  }
+  img:first-child {
+    display: inline-block;
+  }
+ }
+
+.dark  {
+  background-color: $color-brand-tertiary;
+  color: #bfbfbf;
+  transition: all 0.3s ease;
+  
+ #day-light-toggle {
+   color: $color-lightest !important;
+
+   .material-icons {
+     opacity: 0.8;
+   }
+ }
+ // .bg-lightest {
+ //   background-color: rgba(0,0,0,0.9) !important;
+ //   color: $color-lightest !important;;
+ // }
+ .bg-light,.bg-lightest, [class*="bg-dark--"] {
+   background-color: rgba(0,0,0,0.9) !important;
+   color: $color-lightest !important;;
+ }
+ button, .btn {
+   background-color: rgba(255,255,255,0.1);
+
+   &:hover, &:focus, &:active {
+    background-color: $color-brand-primary;
+    color: $color-darkest;
+  }
+ }
+ .hero {
+   color: $color-dark;
+ }
+ .dark-icons {
+  img:last-child {
+    display: inline-block;
+  }
+  img:first-child {
+    display: none;
+  }
+ }
+  .color-light {
+    color: $color-balance !important;
+  }
+}
+
+
+@media screen and (max-width: $viewport-l) {
+  .faq {
+    background-image: none !important;
+  }
+}

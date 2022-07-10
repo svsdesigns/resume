@@ -1,0 +1,176 @@
+.search {
+  input {
+    &:focus + .searchbox-suggest {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.search {
+  position: relative;
+  input {
+    width: 100%;
+    padding-right: 35px;
+    padding-left: 1.2rem;
+    position: relative;
+    z-index: 2;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 4px;
+    background-color: $bg-primary;
+
+    &:focus {
+      background-color: $color-white;
+    }
+  }
+  .material-icons {
+    position: absolute;
+    right: 0.3em;
+    font-size: 2.4rem;
+    top: 50%;
+    z-index: 3;
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+
+input[type="text"], input[type="number"], input[type="tel"], input[type="password"], input[type="date"], input[type="search"], input[type="email"], textarea, select {
+  &.input-focus {
+    outline: 0;
+    border-color: $color-dark;
+   }
+}
+
+.input-container {
+  position: relative;
+}
+.input-container button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.select {
+  position: relative;
+  &:before {
+    content: '\e313';
+    font-family: "Material Icons";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+  select {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    padding-right: 1.8rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-ms-expand {
+     /* IE 8 */
+     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+     /* IE 5-7 */
+     filter: alpha(opacity=0);
+     /* Good browsers :) */
+     opacity:0;
+    }
+
+    &:invalid{
+      font-size: 1.3rem;
+      line-height: 1.6;
+      color: $color-base;
+      font-family: $font-default-semibold;
+      font-weight: $font-regular;
+    }
+
+    > option {
+      &:disabled, &[disabled], &[disabled]:first-child {
+        font-size: 1.3rem;
+        color: $color-light;
+        font-weight: $font-regular;
+      }
+    }
+  }
+}
+
+.label-mandatory:after {
+  content: '*';
+  color: $color-error;
+  padding-left: 3px;
+}
+
+.readonly {
+  border: none;
+  padding: 0;
+  height: auto;
+  max-height: none;
+}
+
+.disabled {
+  background-color: $color-disable;
+  pointer-events: none;
+}
+
+.form-group {
+  + .form-group {
+    margin-top: 1.3rem;
+  }
+}
+
+.form-group {
+  &-s {
+    + .form-group-s {
+      margin-top: 0.4rem;
+    }
+  }
+  &-m {
+    + .form-group-m {
+      margin-top: 1.5rem;
+    }
+  }
+  &-l {
+    + .form-group-l {
+      margin-top: 2.1rem;
+    }
+  }
+}
+
+.form-group__msg {
+  line-height: 1.5;
+  min-height: 1.6rem;
+  display: block;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  &--error {
+    .textbox-full, input {
+      border-color: $color-error;
+    }
+    .form-group__msg {
+      color: $color-error;
+      display: block;
+    }
+  }
+}
+
+/*.rebranding {
+  .input-container button {
+    position: absolute;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    transform: none;
+    z-index: 1;
+  }
+}*/

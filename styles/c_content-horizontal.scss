@@ -1,0 +1,100 @@
+.content-horizontal {
+  padding:0.6em 0.6em 0.6em 1.2em;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  flex-grow: 1;
+  flex-flow: row nowrap;
+
+
+  &__item {
+    padding-right: 1.2em;
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: 0;
+  }
+
+  .card {
+    margin-bottom: 0;
+    margin-top: 0;
+    width: calc(100vw - 4.2em);
+    // height: 100%;
+    max-width: 278px;
+    display: flex;
+  }
+  promo-card {
+    display: flex;
+    flex: 1;
+  }
+}
+
+.content-horizontal {
+  &__item:only-child {
+    flex: 1;
+    .card {
+      width: 100%;
+      max-width: inherit;
+      display: block;
+    }
+  }
+}
+
+.content-horizontal--small {
+  .card {
+    width: 16rem;
+  }
+
+  .content-horizontal__item {
+    margin-right: 0.5rem;
+    padding-right: 0.8rem;
+  }
+}
+
+.card {
+  .content-horizontal {
+    margin-left: -2.4em;
+    margin-right: -2.4em;
+    width: auto;
+    padding: 0.6em 2.4em;
+  }
+}
+
+.wrapper {
+  .content-horizontal {
+    margin-left: -12px;
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width:640px) {
+  .content-horizontal {
+    &__item {
+      flex: 1;
+    }
+    &__item:last-child {
+      padding-right: 0;
+    }
+    .card {
+      width: auto;
+      max-width: inherit;
+    }
+  }
+
+  .content-horizontal--small {
+    &__item {
+      flex: auto;
+    }
+    .card {
+      width: 16rem;
+    }
+  }
+  .wrapper {
+    .content-horizontal {
+      width: auto;
+      padding-left: 0.8rem;
+      padding-right: 0.2rem;
+    }
+  }
+}

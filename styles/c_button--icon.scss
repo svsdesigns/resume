@@ -1,0 +1,26 @@
+// Button icon
+.btn + .btn {
+	margin-left: 6px;
+}
+
+.btn-icon {
+
+  + .btn-icon {
+  	margin-left: 0;
+  }
+
+  &__img {
+    display: inline-flex;
+
+    img {
+    	
+    }
+  }
+
+	&__desc {
+    transform: translateY(0.13rem);
+	}
+  &__img + &__desc, &__desc + &__img {
+    margin-left: 0.6rem;
+  }
+}

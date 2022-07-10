@@ -1,0 +1,29 @@
+.card--horizontal {
+	display: flex;
+	flex-direction: row-reverse;
+	.card__content {
+		width: 70%;
+		box-shadow: 3px 0px 4px -3px rgba(0,0,0,0.12);
+
+	}
+	.card__header {
+		width: 30%;
+		padding-top: 0;
+		border-radius: 0 3px 3px 0;
+		overflow: hidden;
+
+		&:after {
+			content: '';
+			background: none;
+		}
+	}
+	.card__img {
+		height: 100%;
+		max-height: 100%;
+		max-width: none;
+		width: auto;
+		position: absolute;
+		right: 0;
+		left: initial;
+	}
+}

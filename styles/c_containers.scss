@@ -1,0 +1,105 @@
+// Container classes
+.main {
+ -webkit-overflow-scrolling: touch;
+}
+
+.content {
+  padding-bottom: 12rem;
+  // padding-top: 12rem; //old
+  padding-top: 12.6rem;
+  min-height: 100vh;
+
+  &--small {
+    padding-top: 6.4rem;
+  }
+  &--x-small {
+    padding-top: 4.4rem;
+  }
+
+  &--x-small-mobile {
+    padding-top: 4.4rem;
+  }
+
+  // &:after {
+  //   content: '\A9\ Copyright PocketPills';
+  //   font-weight: $font-regular;
+  //   font-size: 1.1rem;
+  //   position: absolute;
+  //   bottom: 2rem;;
+  //   left: 50%;
+  //   margin-left: -70px;
+  //   color: $color-base;
+  //   z-index: -1;
+  // }
+}
+@media only screen and (min-device-width: 640px) {
+  .content--x-small-mobile {
+    padding-top: 0;
+  }
+}
+
+.wrapper {
+  padding: 0 1.2rem;
+  margin: 0 auto;
+  // max-width: 64rem; //old
+  max-width: 76rem;
+}
+.wrapper--small {
+  max-width: 48rem;
+}
+
+.section {
+  margin-top: 1.2em;
+
+  &:empty {
+    margin-top: 0;
+  }
+
+  &__header {
+    padding: 1.2em;
+  }
+
+  &__content {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  &__header + &__content {
+    padding-top: 0;
+  }
+
+  &__footer {
+    padding: 1.2em;
+  }
+
+  &-light {
+    background-color: $color-white;
+  }
+}
+
+.shell-content {
+  + .content {
+    padding-top: 0;
+  }
+}
+
+.form-group-block{
+  box-shadow: 0 0 2px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.1);
+  border-radius: 0.3em;
+  overflow: hidden;
+  .search input {
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3em 0.3em 0 0;
+    margin: 0;
+  }
+}
+
+.content-overlay {
+  padding-bottom: 5rem;
+}
+@media only screen and (min-device-width: 640px) {
+  .content-overlay {
+    padding-bottom: 0;
+  }
+}

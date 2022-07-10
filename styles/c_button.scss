@@ -1,0 +1,42 @@
+.btn {
+  font-family: $font-default-semibold;
+  // font-weight: $font-bold;
+  line-height: $font-lh-default;
+  border-radius: $border-radius-button;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  position: relative;
+  border: 0;
+  margin: 0;
+  color: $color-brand-primary;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.3rem;
+  overflow: hidden;
+  text-transform: uppercase;
+
+  &:hover, &:active, &:focus {
+    color: $color-re-light;
+  }
+
+  &[disabled], &[disabled="disabled"], &[disabled="true"] {
+    color: $color-white;
+  }
+}
+
+.btn--fab {
+  border-radius: $border-radius-circle;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 0.8rem;
+}
+
+// All buttons
+
+// @import "c_button--icon.scss";
+// @import "c_button--position.scss";
+// @import "c_button--size.scss";
+// @import "c_button--fab.scss";

@@ -1,0 +1,113 @@
+.toastr {
+  // visibility: hidden;
+  min-width: 260px;
+  width: 100%;
+  background-color: $color-brand-tertiary;
+  color: $color-brand-primary;
+  border-radius: $border-radius-xs;
+  position: fixed;
+  z-index: $zindex-toast;
+  left: 50%;
+  bottom: 0;
+  transform: translate3d(-50%,200%,0);
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  .material-icons:after {
+    content: 'info';
+  }
+
+  &--success {
+    background-color: $color-success;
+    color: $color-white;
+
+    .material-icons:after {
+      content: 'check';
+    }
+
+  }
+  &--error {
+    background-color: $color-error;
+    color: $color-white;
+
+    .material-icons:after {
+      content: 'report';
+    }
+  }
+  &--warning {
+    background-color: $color-warning;
+    color: $color-darkest;
+
+    .material-icons:after {
+      content: 'warning';
+    }
+  }
+}
+
+.toastr.show {
+  // transform: translate3d(-50%,-5rem,0);
+  // transition: all 0.25s ease 5s;
+  // visibility: visible;
+  // -webkit-animation: fadein 0.25s linear 1s;
+  // animation: fadein 0.25s linear;
+  // animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation-name: chaukanna;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-duration: 0.2s;
+  animation-delay: 0.25s;
+
+}
+
+@keyframes chaukanna {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50%,110%,0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(-50%,-6rem,0);
+    }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    transform: translate3d(-50%,110%,0);
+    // opacity: 0;
+  }
+  to {
+    transform: translate3d(-50%,-5rem,0);
+    // opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    transform: translate3d(-50%,110%,0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(-50%,-5rem,0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    transform: translate3d(-50%,110%,0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(-50%,-5rem,0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    transform: translate3d(-50%,110%,0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(-50%,-5rem,0);
+    opacity: 1;
+  }
+}

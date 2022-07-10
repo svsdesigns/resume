@@ -1,0 +1,81 @@
+//Overlay Header
+.overlay {
+  position: fixed;
+  padding-bottom: 2.4rem;
+  opacity: 0;
+  z-index: 8; //done after header fix
+  transform: translateY(100%);
+  transform-origin: right bottom;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 1s ease, opacity 0.1s ease 0.08s;//, border-radius 0.2s ease;
+}
+
+.overlay, .overlay-pageview {
+  background-color: $bg-body;
+  
+  &__header {
+    position: absolute;
+    // z-index: 2;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    min-height: 4.2rem;
+    background-color: $bg-primary;
+    box-shadow: 0 3px 5px -3px rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+
+    &--no-bg {
+      background-color: transparent;
+      box-shadow: none;
+      border: 0;
+    }
+  }
+
+  .header__heading {
+    color: $color-dark;
+  }
+}
+
+.overlay-pageview {
+  .overlay__header {
+    position: fixed;
+  }
+  .overlay__content {
+    opacity: 1;
+    max-height: none;
+    height: 100%;
+  }
+}
+
+
+.overlay{
+  &__content {
+    opacity: 0;
+    padding: 4.4rem 0 0;
+    position: relative;
+    z-index: 0;
+    max-height: 100vh;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling:touch;
+    -o-transition: all 0.18s ease 0.15s;
+    -ms-transition: all 0.18s ease 0.15s;
+    -moz-transition: all 0.18s ease 0.15s;
+    -webkit-transition: all 0.18s ease 0.15s;
+    transition: all 0.18s ease 0.15s;
+    &--scroll {
+      padding-bottom: $overlay-content-scroll + rem;  
+    }
+  }
+}
+
+.overlay-open {
+  overflow: hidden; 
+}

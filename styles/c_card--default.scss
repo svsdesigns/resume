@@ -1,0 +1,126 @@
+.card {
+	margin-top: 1.2rem;
+	overflow: hidden;
+	box-shadow: 0 0px 3px 0 rgba(0,0,0,.1), 0 1px 5px 0 rgba(0,0,0,.1);
+	background-color: $color-white;
+	display: block;
+	border-radius: $border-radius-default;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&--disabled {
+		opacity: 0.5;
+	}
+
+	&--no-shadow {
+		box-shadow: none !important;
+	}
+
+	&--no-radius {
+		border-radius: 0;
+	}
+
+	&__action {
+		position: absolute;
+		top: 1.2em;
+		right: 1.2em;
+		z-index: 1;
+	}
+}
+
+.card {
+	&__content {
+		padding: 1rem 1.2rem;
+
+		&-footer {
+			padding-top: 0;
+			padding-bottom: 0;
+			border-top: 1px solid $color-border;
+			margin-top: 12px;
+			margin-bottom: -12px;
+			position: relative;
+		}
+
+		&-long {
+			padding: 2.4rem 1.2rem;
+		}
+		&-wide {
+			padding: 1.2rem 2.4rem;
+		}
+		&-small {
+			padding: 0.6rem 0;
+		}
+		&-xsmall {
+			padding: 0.6rem 1rem;
+		}
+	}
+
+	&__details {
+		font-weight: $font-regular;
+		font-size: 1.2rem;
+		color: $color-light;
+	}
+}
+
+.card {
+	&__heading {
+		font-family: $font-default-semibold;
+		color: $color-white;
+		font-size: 1.5rem;
+		text-overflow: ellipsis;
+		width: 100%;
+		overflow: hidden;
+		white-space: initial;
+	}
+
+	&__desc {
+		font-size: 1.4rem;
+		color: $color-base;
+		margin-top: 0;
+		margin-bottom: 0;
+		font-family: $font-default-regular;
+		white-space: initial;
+
+		+ .card__details {
+			margin-top: 0.3rem;
+		}
+	}
+}
+
+.card {
+	&__header {
+		padding: 0.6rem 1.2rem;
+	}
+	&__footer-default {
+		padding: 0.6rem 1.2rem;
+	}
+	&__footer {
+		padding: 0 1.2rem;
+		//background-color: $color-white;
+
+		&-desc {
+			color: $color-base;
+			font-size: 1.3rem;
+		}
+	}
+}
+
+
+.card__link {
+	color: $color-link;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+
+.card__content {
+	.card__heading {
+		color: $color-dark;
+	}
+}
+
+.card--overflow {
+	overflow: visible;
+}

@@ -1,0 +1,114 @@
+
+//========================= Font ==========================//
+
+// Family
+$font-family-primary: 'Merriweather', 'Times New Roman', serif !default;
+$font-family-secondary:  'Montserrat', Arial, Helvetica, sans-serif !default; //'Merriweather Sans'
+
+// Weight
+$font-primary-light: 100 !default;
+$font-primary-regular: 300 !default;
+$font-primary-medium: 400 !default;
+$font-primary-bold: 700 !default;
+
+$font-secondary-light: 100 !default;
+$font-secondary-regular: 400 !default;
+$font-secondary-medium: 600 !default;
+$font-secondary-bold: 700 !default;
+
+// Line height
+$font-lh-default: 1 !default;
+$font-lh-s: 1.2 !default;
+$font-lh-m: 1.4 !default;
+$font-lh-l: 1.7 !default;
+$font-lh-xl: 2.0 !default;
+
+//========================= font sizes ==========================//
+$font-size-base: 62.5% !default;
+$h1: 3rem !default; //4rem
+$h2: 2.8rem !default; //3.2rem
+$h3: 2.4rem !default; //2.4rem
+$h4: 1.6rem !default; //1.9rem
+$h5: 1.4rem !default; //1.6rem
+$h6: 1.3rem !default;
+$p: 1.3rem !default;
+$small: 1rem !default;
+
+// Form element font sizes
+$font-size-text-input: 1.5rem !default;
+$font-size-select: 1.5rem !default;
+//========================= Breakpoints ==========================//
+$grid-gutter: 0.4rem!default; // will be twice this value
+$viewport-xs: 320px !default; // 640px
+$viewport-s: 640px !default; // 640px
+$viewport-m: 768px !default; // 760px
+$viewport-l: 1024px !default; // 960px
+$viewport-xl: 1170px !default; // 1350px
+$viewport-xxl: 1366px !default; // 1920px
+
+//========================= Colors ==========================//
+// Brand
+$color-brand-primary: #f3d849 !default; // Yellow
+$color-brand-primary-light: #FFF6CE !default; // Blue
+$color-brand-secondary: #4285f4 !default; // Blue
+$color-brand-secondary-light: #BEDBFD !default; // Blue
+$color-brand-tertiary: 	#191718 !default; // black
+
+//rebranding colors
+$color-light: #666 !default; //tertiary brand color
+$color-lighter: #e0e0e0 !default; //border color
+$color-lightest: #e0e5e9 !default; //Light grey
+
+$color-balance: #999999 !default; //mid grey
+
+$color-dark: #191718 !default; //mid grey
+$color-darker: #333 !default; //Dark gray
+$color-darkest: #191718 !default; //Light grey
+
+// Copy
+$color-black : #000 !default;
+$color-white:  #fff !default;
+
+// State
+$color-success: #2E7D32 !default;
+$color-error: #D82323 !default;
+$color-warning: #E6A200 !default;
+$color-info: #666 !default;
+$color-disable: #ccc !default;
+$color-google: #4285f4 !default;
+
+// Utility
+$color-link:   #4285f4 !default; //#0277bd
+$color-border: #e0e0e0 !default;
+
+
+//========================= Utilities ==========================//
+
+// Border radius
+$border-radius-xs: 0.4rem!default;
+$border-radius-s: 0.8rem!default;
+$border-radius-m: 1.2rem!default;
+$border-radius-l: 1.6rem!default;
+$border-radius-xl: 2rem!default;
+$border-radius-xxl: 500px!default;
+$border-radius-circle: 50% !default;
+
+// Z-index
+$zindex-header: 4 !default;
+$zindex-footer: 4 !default;
+$zindex-sticky-cta: 5 !default;
+$zindex-sidebar: 6 !default;
+$zindex-overlay: 7 !default;
+$zindex-toast: 8 !default;
+
+
+// aspect ratio
+$aspect-ratio-landscape: 56.25% !default;
+$aspect-ratio-portrait: 177.78% !default;
+$aspect-ratio-square: 100% !default;
+
+//Icon
+$icon-size: 0.4rem !default;
+$icon-size-default: 5*$icon-size !default; // 2rem
+
+

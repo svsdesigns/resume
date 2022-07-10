@@ -1,0 +1,194 @@
+.c-modal {
+  background-color: rgba(0,0,0,0.9);
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  padding: 2.4rem 0.6rem;
+
+  &__container {
+    background-color: $color-white;
+    border-radius: 0.6rem;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &__header {
+    padding: 0.6rem 1.2rem;
+    border-bottom: 1px solid $color-border;
+
+    .btn-icon {
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+    }
+  }
+  &__footer {
+    border-top: 1px solid $color-border;
+    // margin-top: -1px;
+
+    .btn-ghost {
+      padding: 1rem 0.6rem 1rem 1.2rem;
+    }
+    .btn-ghost + .btn-ghost {
+      padding-left: 0.6rem;
+      margin-left: 0;
+    }
+    .btn-ghost:last-child, .btn-ghost:only-child,  {
+      padding-right: 1.2rem;
+    }
+
+    &-content {
+      padding: 0.6rem;
+      text-align: center;
+    }
+  }
+}
+
+// Modal sizes
+.c-modal {
+ &--s {
+  .c-modal__container {
+    max-width: 32rem;
+  }
+ }
+ &--m {
+  .c-modal__container {
+    max-width: 48rem;
+  }
+ }
+ &--l {
+  .c-modal__container {
+    max-width: 76rem;
+  }
+ }
+}
+
+@media only screen and (min-width:640px) {
+  .c-modal {
+    &__container {
+      max-width: 90vw;
+    }
+  }
+}
+
+
+//Modal type
+@media only screen and (max-width:640px) {
+  .c-modal {
+    &--bottom-sheet {
+      .c-modal__container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: initial;
+        margin: 0;
+        border-radius: 0.8rem 0.8rem 0 0;
+        max-height: 80vh;
+      }
+
+      .c-modal__content {
+        max-height: 50vh;
+        overflow-y: auto;
+        // padding-bottom: 5rem;
+      }
+    }
+  }
+}
+
+.c-modal {
+  &--video {
+    .c-modal__content {
+      position: relative;
+      padding-top: 56.25%;
+
+      video, iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.c-modal--cutout {
+  padding-top: 4rem;
+  .c-modal__container {
+    overflow: initial;
+  }
+  .c-modal__content {
+    border-radius: 0.6rem;
+  }
+  .c-modal__footer {
+    border-radius: 0 0 0.6rem 0.6rem;
+    overflow: hidden;
+    // border: 0;
+  }
+}
+
+.c-modal-video__content {
+  position: relative;
+  padding-top: 56.25%;
+  
+  video, iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width:640px) {
+  .c-modal--cutout {
+    .c-modal__footer {
+      overflow: initial;
+    }
+    &.c-modal--bottom-sheet .c-modal__content {
+      max-height: none;
+      overflow-y: initial;
+    }
+    &.c-modal--bottom-sheet .c-modal__container {
+      max-height: none;
+      // overflow-y: initial;
+    }
+  }
+
+  
+}
+
+@media only screen and (min-width:640px) {
+.c-modal-video__content {
+    overflow: hidden;
+    border-radius:8px 8px 0 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

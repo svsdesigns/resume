@@ -1,0 +1,110 @@
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 0.16em 0.16em 0.16em 0.16em;
+  padding: 0.28em;
+  border-radius: 50%;
+  font-size: $icon-size-default;
+  min-width: $icon-size-default;
+  min-height: $icon-size-default;
+  .material-icons {
+    font-size: 1em;
+  }
+  &--social {
+    background-image: url(https://static.pocketpills.com/phil/images/homepage/icon-social.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    // background-position: left 0;
+    border-radius: 0;
+    // padding: 0.18em;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &--xs {
+    font-size: 2*$icon-size;
+    min-width: 2*$icon-size;
+    min-height: 2*$icon-size;
+
+    &.icon--instagram {
+      background-position: left -2*$icon-size;
+    }
+    &.icon--linkedin {
+      background-position: left -2*$icon-size;
+    }
+    &.icon--youtube {
+      background-position: left -2*$icon-size;
+    }
+  }
+  &--s {
+    font-size: 4*$icon-size;
+    min-width: 4*$icon-size;
+    min-height: 4*$icon-size;
+    &.icon--instagram {
+      background-position: left -4*$icon-size;
+    }
+    &.icon--linkedin {
+      background-position: left -8*$icon-size;
+    }
+    &.icon--youtube {
+      background-position: left -12*$icon-size;
+    }
+  }
+  &--m {
+    font-size: 6*$icon-size;
+    min-width: 6*$icon-size;
+    min-height: 6*$icon-size;
+
+    &.icon--instagram {
+      background-position: left -6*$icon-size;
+    }
+    &.icon--linkedin {
+      background-position: left -12*$icon-size;
+    }
+    &.icon--youtube {
+      background-position: left -18*$icon-size;
+    }
+  }
+  &--l {
+    font-size: 8*$icon-size;
+    min-width: 8*$icon-size;
+    min-height: 8*$icon-size;
+    &.icon--instagram {
+      background-position: left -8*$icon-size;
+    }
+    &.icon--linkedin {
+      background-position: left -16*$icon-size;
+    }
+    &.icon--youtube {
+      background-position: left -24*$icon-size;
+    }
+  }
+  &--xl {
+    font-size: 12*$icon-size;
+    min-width: 12*$icon-size;
+    min-height: 12*$icon-size;
+    &.icon--instagram {
+      background-position: left -12*$icon-size;
+    }
+    &.icon--linkedin {
+      background-position: left -12*$icon-size;
+    }
+    &.icon--youtube {
+      background-position: left -12*$icon-size;
+    }
+  }
+}
+
+button > .icon, button.icon {
+  padding: 0.16em;
+}
+
+button > .icon {
+  padding: 0 0.16em;
+}

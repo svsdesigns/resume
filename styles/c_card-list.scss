@@ -1,0 +1,142 @@
+.card-list {
+  > .card {
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0;
+    border-top: 1px solid $color-border;
+    position: relative;
+    &:first-child {
+      border-top: 0;
+    }
+    &.is-clickable:hover, &.is-clickable:active, &.is-clickable:focus {
+      background-color: $color-brand-primary;
+      color: $color-darkest;
+    }
+  }
+
+  &--borderless {
+    > .card {
+      border-top: 0;
+    }
+    .card__content {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+  &--dashed {
+    > .card {
+      border-top-style: dashed;
+    }
+  }
+
+  &--simple {
+    >.card {
+      border: 1px solid $color-border;
+      border-radius: $border-radius-s;
+
+      &:first-child {
+        border-top: 1px solid $color-border;
+      }
+      + .card {
+        margin-top: 0.8rem;
+      }
+    }
+  }
+
+  &--half {
+    > .card {
+      border: 0;
+      &:after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 2.4rem);
+        display: block;
+        border-top: 1px solid #f1f1f1;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    > .card:first-child {
+      &:after {
+        content: '';
+        border-top: 0;
+      }
+    }
+  }
+
+  &--comfortable {
+    .card__content {
+      padding: 1rem 0.8rem 1rem 0.8rem;
+    }
+  }
+
+  &--cozy {
+    .card__content {
+      padding: 0.6em 1.2em;
+    }
+  }
+
+  &--compact {
+    .card__content {
+      padding: 0.3em;
+    }
+  }
+
+  &__active {
+    color: $color-brand-tertiary;
+  }
+}
+
+.card-list--collapse {
+  height: 0px;
+  min-height: 0px;
+  overflow: hidden;
+  transition: min-height 0.3s ease, height 0.1s ease 0.3s;
+}
+
+.card-list--collapse.open {
+  // min-height: 200px;
+  height: auto;
+  border-top: 1px solid $color-border;
+}
+
+.card-list--coupon {
+  > .card {
+    border-width: 1px;
+    border-style: dashed;
+    border-color: $color-brand-secondary;
+    border-radius: 4px;
+    margin: 0.6rem 0;
+
+    &:first-child {
+      border-top-width: 1px;
+      border-style: dashed;
+      margin-top: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

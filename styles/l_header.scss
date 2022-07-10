@@ -1,0 +1,27 @@
+.header {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,.4);
+  z-index: $zindex-header;
+
+  &--primary {
+    padding: $grid-gutter 0;
+    transform: translateY(-190%);
+    transition: transform 0.2s ease;
+    border-bottom: 0.4rem solid $color-brand-secondary;
+    @media only screen and (min-width: $viewport-l){
+      padding: 0;
+    }
+    &.show {
+      transform: translateY(0%);
+      transition: transform 0.2s ease;
+    }
+  }
+  &--secondary {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.12);
+  }
+
+  
+}

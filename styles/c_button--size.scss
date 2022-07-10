@@ -1,0 +1,134 @@
+// Buttons of different sizes
+.btn{
+	&--brand {
+		background-color: $color-brand-primary;
+		color: $color-white;
+		border-radius: $border-radius-re-button;
+		border-color: $color-brand-primary;
+		transition: all 0.25s ease;
+	}
+
+	&--brand-secondary {
+		background-color: $color-brand-secondary;
+		border-color: $color-brand-secondary;
+		color: $color-white;
+	}
+
+	&--brand-tertiary {
+		background-color: $color-brand-tertiary;
+		border-color: $color-brand-tertiary;
+		color: $color-white;
+	}
+	&--light {
+		background-color: $color-white;
+		border-color: $color-white;
+	}
+
+	&--brand, &--brand-secondary, &--brand-tertiary, &--border, &--light {
+		border-radius: $border-radius-re-button;
+		border-width: 3px;
+		border-style: solid;
+		transition: all 0.2s ease;
+
+		&:hover, &:active, &:focus {
+			background-color: $color-re-light !important;
+			border-color: $color-re-light !important;
+			color: $color-white !important;
+			box-shadow: none;
+			transition: all 0.25s ease;
+		}
+	}
+
+	&--disable {
+		background-color: $color-disable;
+		color: $color-white;
+		box-shadow: none;
+		pointer-events: none;
+		&:active {
+			color: $color-white;
+		}
+	}
+	&--border {
+		// padding: 1.05rem 1.2rem 1.15rem;
+
+		&-dashed {
+			border-style:dashed;
+		}
+ 	}
+
+  &--small {
+		font-size: 1.2rem;
+		padding: 1rem 1.2rem;
+  }
+
+  &--large {
+		font-size: 1.6em;
+		padding: 0.9rem 1.2rem 1.1rem;
+	}
+
+	&--wide {
+		padding-left: 50px;
+		padding-right: 50px;
+		&--m {
+			padding: 1.15rem 2.5rem;
+		}
+	}
+
+	&--full {
+		width: 100%;
+	}
+}
+
+.btn-checkout {
+	padding: 0.6rem 0.2rem 0.6rem 1rem;
+	background-color: $color-brand-primary;
+	color: #fff;
+	border-radius: 0.4rem;
+}
+.btn-checkout__strike {
+	color: #AE9BFF;
+	text-decoration: line-through;
+}
+.btn-checkout .material-icons {
+	line-height: 1.5;
+}
+
+.btn-checkout > .row > .column:first-child {
+	padding-right: 1rem;
+	border-right: 1px solid rgba(0,0,0,0.3);
+}
+
+@media(min-width:640px) {
+	.btn-checkout {
+		padding: 0.6rem 1.2rem;
+	}
+
+	.btn-checkout > .row > .column:first-child {
+		padding-right: 1.2rem;
+	}
+}
+
+.btn--rounded {
+	border-radius: $border-radius-re-button !important;
+}
+
+/*.rebranding {
+	.btn {
+		&--brand {
+			border: 3px solid $color-brand-primary;
+		}
+		&--border {
+			border-width: 3px;
+		}
+		&--brand, &--border {
+			border-radius: $border-radius-re-button;
+			&:hover, &:active, &:focus {
+				background-color: $color-re-light !important;
+				border-color: $color-re-light !important;
+				color: $color-white !important;
+				box-shadow: none;
+				transition: all 0.25s ease;
+			}
+		}
+	}
+}*/
