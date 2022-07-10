@@ -385,6 +385,10 @@ video {
   }
 }
 
+.page-container {
+  padding-bottom: 10rem;
+}
+
 .page-container--dashboard {
   background-color: #f9f4fb;
   min-height: 100vh;
@@ -1281,110 +1285,6 @@ b, strong {
   font-weight: bold;
 }
 
-.icon {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.28em;
-  border-radius: 50%;
-  font-size: 2rem;
-  min-width: 2rem;
-  min-height: 2rem;
-}
-.icon .material-icons {
-  font-size: 1em;
-}
-.icon--social {
-  background-image: url(https://static.pocketpills.com/phil/images/homepage/icon-social.svg);
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  border-radius: 0;
-  transform: scale(1);
-  transition: transform 0.2s ease;
-}
-.icon--social:hover {
-  transform: scale(1.1);
-  transition: transform 0.2s ease;
-}
-.icon--xs {
-  font-size: 0.8rem;
-  min-width: 0.8rem;
-  min-height: 0.8rem;
-}
-.icon--xs.icon--instagram {
-  background-position: left -0.8rem;
-}
-.icon--xs.icon--linkedin {
-  background-position: left -0.8rem;
-}
-.icon--xs.icon--youtube {
-  background-position: left -0.8rem;
-}
-.icon--s {
-  font-size: 1.6rem;
-  min-width: 1.6rem;
-  min-height: 1.6rem;
-}
-.icon--s.icon--instagram {
-  background-position: left -1.6rem;
-}
-.icon--s.icon--linkedin {
-  background-position: left -3.2rem;
-}
-.icon--s.icon--youtube {
-  background-position: left -4.8rem;
-}
-.icon--m {
-  font-size: 2.4rem;
-  min-width: 2.4rem;
-  min-height: 2.4rem;
-}
-.icon--m.icon--instagram {
-  background-position: left -2.4rem;
-}
-.icon--m.icon--linkedin {
-  background-position: left -4.8rem;
-}
-.icon--m.icon--youtube {
-  background-position: left -7.2rem;
-}
-.icon--l {
-  font-size: 3.2rem;
-  min-width: 3.2rem;
-  min-height: 3.2rem;
-}
-.icon--l.icon--instagram {
-  background-position: left -3.2rem;
-}
-.icon--l.icon--linkedin {
-  background-position: left -6.4rem;
-}
-.icon--l.icon--youtube {
-  background-position: left -9.6rem;
-}
-.icon--xl {
-  font-size: 4.8rem;
-  min-width: 4.8rem;
-  min-height: 4.8rem;
-}
-.icon--xl.icon--instagram {
-  background-position: left -4.8rem;
-}
-.icon--xl.icon--linkedin {
-  background-position: left -4.8rem;
-}
-.icon--xl.icon--youtube {
-  background-position: left -4.8rem;
-}
-
-button > .icon, button.icon {
-  padding: 0.16em;
-}
-
-button > .icon {
-  padding: 0 0.16em;
-}
-
 /*
 Utility styles
 */
@@ -2035,19 +1935,27 @@ img:not([src]) {
   display: flex;
   text-align: center;
   justify-content: flex-end;
-  width: 100%;
+  padding: 0.4rem;
   position: fixed;
   bottom: 2.4rem;
   right: 1.6rem;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
 }
 .btn--fab > button {
+  background-image: url(/images/darkmode.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 3rem;
+  height: 3rem;
   color: #f3d849;
-  padding: 0.8rem 0.67rem;
+  padding: 0.4rem 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
-  border-color: #f3d849;
+}
+
+.dark .btn--fab > button {
+  background-position: center bottom;
 }
 
 .separator {

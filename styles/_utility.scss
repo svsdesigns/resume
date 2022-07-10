@@ -732,23 +732,31 @@ img:not([src]){
   display: flex;
   text-align: center;
   justify-content: flex-end;
-  width: 100%;
+  padding: 0.4rem;
   position: fixed;
   bottom: 2.4rem;
   right: 1.6rem;
+  box-shadow: 0 0px 8px rgba(0,0,0,0.3);
 
 
   > button {
+    background-image: url(/images/darkmode.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 3rem;
+    height: 3rem;
     color: $color-brand-primary;
-    padding: 0.8rem 0.67rem ;
+    padding: 0.4rem 0.8rem ;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0px 8px rgba(0,0,0,0.3);
-    border-color: $color-brand-primary;
+    // box-shadow: 0 0px 8px rgba(0,0,0,0.3);
+    // border-color: $color-brand-primary;
   }
 }
-
+.dark .btn--fab > button {
+  background-position: center bottom;
+}
 .separator {
     padding: 1.6rem 0;
     display: flex;

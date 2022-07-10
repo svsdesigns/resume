@@ -122,7 +122,20 @@
       </main>
 
       <!-- footer -->
-      <footer></footer>
+      <div class="btn--fab bg-dark--50">
+        <button id="day-light-toggle">
+          
+        </button>
+      </footer>
     </div>
+
+    <!-- Scripts -->
+    <script>
+      // Dark/light mode
+      var dayLightToogle = document.getElementById('day-light-toggle');
+      dayLightToogle.addEventListener('click', function(){
+        document.body.classList.toggle('dark');
+      });
+    </script>
   </body>
 </html>
